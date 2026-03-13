@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install
+        run: npm ci
+        working-directory: ./env-config-mapper
+      - name: Build
+        run: npm run build
+        working-directory: ./env-config-mapper
+      - name: Test
+        run: npm test
+        working-directory: ./env-config-mapper

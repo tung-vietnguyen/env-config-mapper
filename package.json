@@ -1,0 +1,33 @@
+{
+  "name": "env-config-mapper",
+  "version": "0.1.0",
+  "description": "Generic utilities to parse structured environment variables and build key-to-mapping helpers.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p .",
+    "prepare": "npm run build",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "keywords": ["env", "env-vars", "env-mapper", "config", "mapping", "react"],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/env-config-mapper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/env-config-mapper/issues"
+  },
+  "homepage": "https://github.com/your-org/env-config-mapper#readme",
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "jest": "^29.6.1",
+    "ts-jest": "^29.1.0",
+    "@types/jest": "^29.5.3"
+  }
+}
